@@ -30,13 +30,7 @@ def main():
     with open(filename, "r", encoding="utf-8") as file:
         template = file.read()
     
-    # Choosing the correct list of placeholders
-    if choice == "1":
-        placeholders = placeholders_hospital
-    elif choice == "2":
-        placeholders = placeholders_camping
-    elif choice == "3":
-        placeholders = placeholders_castle
+    
 
     # №1 Hospital
     placeholders_hospital = [
@@ -100,13 +94,21 @@ def main():
         "Noun5"
     ]
 
+    # Choosing the correct list of placeholders
+    if choice == "1":
+        placeholders = placeholders_hospital
+    elif choice == "2":
+        placeholders = placeholders_camping
+    elif choice == "3":
+        placeholders = placeholders_castle
+
     # Empty dictionary for storing the answers
     answers = {}
 
     # Loop through every placeholder and ask the user for input
-    for placeholder in placeholders if choice == "1" else placeholders_camping if choice == "2" else placeholders_castle:
+    for placeholder in placeholders:
         # Making nice questions for the user input prompt
-        question = placeholder.replace("_", " ").title()
+        question = placeholder.replace("(", "").replace(")", "").strip()
         user_input = input(f"Enter a {question}: ").strip()
         answers[placeholder] = user_input
 
@@ -114,7 +116,7 @@ def main():
     story = template.format(**answers)
 
     # Prompt the user for inputs based on placeholders
-    print("\n----- Here is your Mad Lib story -----")
+    print("\n----- Here is your Mad Lib story (๑˃ᴗ˂) -----")
     print(story)
 
 if __name__ == "__main__":
