@@ -12,8 +12,11 @@ def main():
     print("1. Hospital Adventure")
     print("2. Camping Trip")
     print("3. Castle Quest")
+    print("4. Alien Interview")
+    print("5. Cooking Disaster")
+    print("6. Day of a Superhero (OnePuchMan style)")
 
-    choice = input("Enter your choice (1-3): ").strip()
+    choice = input("Enter your choice (1-6): ").strip()
     
     # Loop to determine the filename based on the user's choice
     if choice == "1":
@@ -22,6 +25,12 @@ def main():
         filename = "templates/camping.txt"
     elif choice == "3":
         filename = "templates/castle.txt"
+    elif choice == "4":
+        filename = "templates/alien.txt"
+    elif choice == "5":
+        filename = "templates/cooking.txt"
+    elif choice == "6":
+        filename = "templates/superhero.txt"
     else:
         print("Invalid choice (>_<). Please run the program again.")
         return
@@ -30,8 +39,6 @@ def main():
     with open(filename, "r", encoding="utf-8") as file:
         template = file.read()
     
-    
-
     # №1 Hospital
     placeholders_hospital = [
         "Number",
@@ -94,6 +101,60 @@ def main():
         "Noun5"
     ]
 
+    # №4 Alien
+    placeholders_alien = [
+        "Adjective",
+        "Proper Noun (Alien Name)",
+        "Color",
+        "Vehicle",
+        "Food",
+        "Noun",
+        "Verb",
+        "Adjective2",
+        "Noun2",
+        "Silly Object",
+        "Verb2",
+        "Plural Noun",
+        "Adjective3",
+        "Noun3",
+        "Silly Word"
+    ]
+
+    # №5 Cooking
+    placeholders_cooking = [
+        "Adjective",
+        "Dish Name",
+        "Family Member",
+        "Number",
+        "Plural Food",
+        "Kitchen Tool",
+        "Liquid",
+        "Adjective2",
+        "Noun",
+        "Animal",
+        "Verb in past tense",
+        "Smelly Thing",
+        "Another Smelly Thing",
+        "Verb",
+        "Noun2",
+        "Plural Noun",
+        "Exclamation"
+    ]
+
+    # №6 Superhero
+    placeholders_superhero = [
+        "Overpowered ability",
+        "Cool Hero Name",
+        "Color",
+        "Adjective",
+        "Plural Noun",
+        "Noun",
+        "Verb in past tense",
+        "Silly Japanese word",
+        "Useless action",
+        "Food"
+    ]
+
     # Choosing the correct list of placeholders
     if choice == "1":
         placeholders = placeholders_hospital
@@ -101,6 +162,12 @@ def main():
         placeholders = placeholders_camping
     elif choice == "3":
         placeholders = placeholders_castle
+    elif choice == "4":
+        placeholders = placeholders_alien
+    elif choice == "5":
+        placeholders = placeholders_cooking
+    elif choice == "6":
+        placeholders = placeholders_superhero
 
     # Empty dictionary for storing the answers
     answers = {}
