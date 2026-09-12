@@ -1,4 +1,4 @@
-# Mad libs mini-projectn >> A fun game to kill your time `^_^`
+# Mad libs mini-project -- A fun game to kill your time (^_^)
 
 def main():
     # Welcome message and instructions
@@ -14,7 +14,7 @@ def main():
     print("3. Castle Quest")
     print("4. Alien Interview")
     print("5. Cooking Disaster")
-    print("6. Day of a Superhero (OnePuchMan style)")
+    print("6. Day of a Superhero (OnePunchMan style)")
 
     choice = input("Enter your choice (1-6): ").strip()
     

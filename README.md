@@ -8,24 +8,34 @@ The player chooses a story template, fills in the missing words, and receives a 
 
 1. Make sure you have Python 3 installed.
 2. Open a terminal in the project folder.
-3. Run the program:
-
-<```bash
-python main.py >
-
-1. Choose a template (1–6).
-2. Answer the questions.
-3. Enjoy your story (つ✧ω✧)つ
+3. Run the program
+4. Choose a template (1–6).
+5. Answer the questions.
+6. Enjoy your story (つ✧ω✧)つ
 
 ## Available templates
 
-1. **Hospital Adventure** – Official template  
-2. **Camping Trip** – Official template  
-3. **Castle Quest** – Official template  
+1. **Hospital Adventure** – Project's template  
+2. **Camping Trip** – Project's template 
+3. **Castle Quest** – Project's template  
 4. **Alien Interview** – Original  
 5. **Cooking Disaster** – Original  
-6. **Superhero Fail** – Inspired by One-Punch Man
+6. **Day of a Superhero** – Inspired by One-Punch Man
 
+## Project Structure
+mad-libs-project1/
+
+├── main.py
+├── README.md
+├── .gitignore
+└── templates/
+
+    ├── hospital.txt
+    ├── camping.txt
+    ├── castle.txt
+    ├── alien.txt
+    ├── cooking.txt
+    └── superhero.txt
 
 ## Notes
 
