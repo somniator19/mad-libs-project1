@@ -26,19 +26,6 @@ python main.py >
 5. **Cooking Disaster** – Original  
 6. **Superhero Fail** – Inspired by One-Punch Man
 
-## Project structure
-
-mad-libs-project1/
-├── main.py
-├── README.md
-├── .gitignore
-└── templates/
-├── hospital.txt
-├── camping.txt
-├── castle.txt
-├── alien.txt
-├── cooking.txt
-└── superhero.txt 
 
 ## Notes
 
