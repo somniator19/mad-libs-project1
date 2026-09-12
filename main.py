@@ -169,14 +169,76 @@ def main():
     elif choice == "6":
         placeholders = placeholders_superhero
 
+    # Simple mapping for user-friendly questions
+    nice_names = {
+        # 0 Common templates
+        "Number": "a number",
+        "Number2": "another number",
+        "Measure of time": "a measure of time (e.g. days, weeks, years)",
+        "Measure of Time": "a measure of time (e.g. hours, days)",
+        "Mode of Transportation": "a mode of transportation",
+        "Adjective": "an adjective",
+        "Adjective2": "another adjective",
+        "Adjective3": "one more adjective",
+        "Adjective4": "yet another adjective",
+        "Adjective5": "one final adjective",
+        "Noun": "a noun",
+        "Noun2": "another noun",
+        "Noun3": "one more noun",
+        "Noun4": "yet another noun",
+        "Noun5": "one final noun",
+        "Color": "a color",
+        "Part of the Body": "a body part",
+        "Part of the Body 2": "another body part",
+        "Verb": "a verb",
+        "Verb2": "another verb",
+        "Silly Word": "a silly word",
+        "Proper Noun (Person's Name)": "a person's name",
+        "Adjective (Feeling)": "an adjective that describes a feeling",
+        "Adjective (Feeling) 2": "another feeling adjective",
+        "Animal": "an animal",
+        "Verb (ending in ing)": "a verb ending in -ing",
+        "Adverb (ending in ly)": "an adverb ending in -ly",
+        "Place": "a place",
+        "Magical Creature (Plural)": "a plural magical creature (e.g. unicorns)",
+        "Magical Creature (Plural)2": "another plural magical creature",
+        "Room in a House": "a room in a house",
+        "Noun (Plural)3": "a plural noun",
+        "Noun (Plural)4": "another plural noun",
+
+        # 4 Alien template
+        "Proper Noun (Alien Name)": "an alien name",
+        "Vehicle": "a vehicle",
+        "Food": "a food",
+        "Silly Object": "a silly object",
+        "Plural Noun": "a plural noun",
+
+        # 5 Cooking template
+        "Dish Name": "a dish name",
+        "Family Member": "a family member",
+        "Plural Food": "a plural food (e.g. potatoes)",
+        "Kitchen Tool": "a kitchen tool",
+        "Liquid": "a liquid",
+        "Verb in past tense": "a verb in past tense",
+        "Smelly Thing": "something that smells bad",
+        "Another Smelly Thing": "another smelly thing",
+        "Exclamation": "an exclamation (e.g. Oh no!, Yikes!)",
+
+        # 6 OnePunchMan template
+        "Overpowered ability": "an overpowered ability (e.g. punch with the force of a thousand suns)",
+        "Cool Hero Name": "a cool hero name",
+        "Silly Japanese word": "a silly Japanese-sounding word",
+        "Useless action": "a completely useless action",
+    }
+
     # Empty dictionary for storing the answers
     answers = {}
 
     # Loop through every placeholder and ask the user for input
     for placeholder in placeholders:
         # Making nice questions for the user input prompt
-        question = placeholder.replace("(", "").replace(")", "").strip()
-        user_input = input(f"Enter a {question}: ").strip()
+        question = nice_names.get(placeholder, placeholder) # Fallback to original name
+        user_input = input(f"Give me {question}: ").strip()
         answers[placeholder] = user_input
 
     # Fill in the template with the user's answers
